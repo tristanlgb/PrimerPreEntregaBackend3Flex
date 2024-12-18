@@ -1,0 +1,22 @@
+<h1>Your Cart</h1>
+
+<ul>
+    {{#each cart.products}}
+    <li>
+        <strong>{{this.product.title}}</strong>
+        <p>Price: ${{this.product.price}}</p>
+        <p>Quantity: {{this.quantity}}</p>
+    </li>
+    {{/each}}
+</ul>
+
+<p>Total Price: ${{cart.total}}</p>
+
+<button onclick="checkout()">Checkout</button>
+
+<script>
+    function checkout() {
+        // Add checkout logic here
+        alert('Proceeding to checkout...');
+    }
+</script>
